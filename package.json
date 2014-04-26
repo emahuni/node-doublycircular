@@ -1,0 +1,22 @@
+{
+  "author": "Casey Robinson <casey@rampantmonkey.com> (https://rampantmonkey.com)",
+  "name": "doublycircular",
+  "description": "Doubly Circular linked list with iterator and array-like interface.",
+  "keywords": ["array", "iterator", "circular", "linkedlist", "list", "doublycircular"],
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rampantmonkey/node-doublycircular.git"
+  },
+  "main": "./",
+  "scripts": {
+    "test": "make"
+  },
+  "engines": {
+    "node": ">= v0.10.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
