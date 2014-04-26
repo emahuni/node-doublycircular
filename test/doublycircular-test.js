@@ -15,5 +15,8 @@ describe('DoublyCircular', function () {
     it('updates the length', function () {
       assert.equal(list.length, 5)
     })
+    it('keeps track of the current item', function () {
+      assert.equal(list.current, '4')
+    })
   })
 })
