@@ -1,2 +1,2 @@
-# dcll
+# doublycircular
 Doubly circular linked list.
