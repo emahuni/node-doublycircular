@@ -34,4 +34,35 @@ describe('DoublyCircular', function () {
       assert.equal(list.current, '15')
     })
   })
+
+  describe('#next()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 10; i++) {
+        list.push(i)
+      }
+    })
+
+    beforeEach(function () {
+      list.reset()
+    })
+
+    it('returns the current item in the list and moves the current item pointer', function () {
+      assert.equal(list.current, 0)
+      assert.equal(list.next(), 0)
+      assert.equal(list.current, 1)
+    })
+
+    it('goes the whole way around once', function () {
+      for (var i = 0; i < 10; i++) {
+        assert.equal(list.next(), i)
+      }
+    })
+
+    it("goes 'round-and-'round", function () {
+      for (var i = 0; i < 111; i++) {
+        assert.equal(list.next(), i%10)
+      }
+    })
+  })
 })
