@@ -18,6 +18,9 @@ describe('Mutators', function () {
     it('keeps track of the current item', function () {
       assert.equal(list.current, '4')
     })
+    it('returns a reference to the list', function () {
+      assert.equal(list.push(null), list)
+    })
   })
 
   describe('#unshift()', function () {
@@ -33,6 +36,9 @@ describe('Mutators', function () {
     })
     it('updates the entry point', function () {
       assert.equal(list._entry.data, '4')
+    })
+    it('returns a reference to the list', function () {
+      assert.equal(list.unshift(null), list)
     })
   })
 
