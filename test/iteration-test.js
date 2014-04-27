@@ -88,4 +88,19 @@ describe('Iteration', function () {
       assert.doesNotThrow(function () {list.forEach()})
     })
   })
+
+  describe('#reduce()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 1; i < 5; i++) {
+        list.push(i*i)
+      }
+    })
+
+    it('collects the result of the callback', function () {
+      assert.equal(list.reduce(function (acc, item) {
+        return acc + item
+      }, 0), 30)
+    })
+  })
 })
