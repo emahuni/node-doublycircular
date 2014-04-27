@@ -11,8 +11,8 @@ Doubly Circular linked list with iterator and array-like interface
 ## Methods
 
 ### Mutator methods
-- `DoublyCircular.prototype.pop()`
-- `DoublyCircular.prototype.push()`
+- `DoublyCircular.prototype.pop()` remove last item added to the list
+- `DoublyCircular.prototype.push()` add new item to the list
 - `DoublyCircular.prototype.reverse()`
 - `DoublyCircular.prototype.shift()`
 - `DoublyCircular.prototype.unshift()`
@@ -21,7 +21,7 @@ Doubly Circular linked list with iterator and array-like interface
 ### Accessor methods
 - `DoublyCircular.prototype.concat()`
 - `DoublyCircular.prototype.join()`
-- `DoublyCircular.prototype.toArray()`
+- `DoublyCircular.prototype.toArray()` return an array containing all of the items in the list
 
 ### Iteration methods
 - `DoublyCircular.prototype.every()`
