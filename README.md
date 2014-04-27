@@ -24,7 +24,7 @@ Doubly Circular linked list with iterator and array-like interface
 - `DoublyCircular.prototype.toArray()` return an array containing all of the items in the list
 
 ### Iteration methods
-- `DoublyCircular.prototype.every()`
+- `DoublyCircular.prototype.every()` check if `callback` is true for every item
 - `DoublyCircular.prototype.filter()`
 - `DoublyCircular.prototype.forEach()` invoke `callback` function for each item in the list
 - `DoublyCircular.prototype.map()` create a new list with each item's data containing the result of the callback

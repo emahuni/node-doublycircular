@@ -119,4 +119,22 @@ describe('Iteration', function () {
       }, 0), 30)
     })
   })
+
+  describe('#every()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 1; i < 5; i++) {
+        list.push(i*2)
+      }
+    })
+
+    it('determines if every element is even', function () {
+      assert(list.every(function (item) { return item%2 === 0 }))
+    })
+
+    it('determines that not every element is even', function () {
+      list.push(7)
+      assert(!list.every(function (item) { return item%2 === 0}))
+    })
+  })
 })
