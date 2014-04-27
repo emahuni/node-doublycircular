@@ -89,6 +89,22 @@ describe('Iteration', function () {
     })
   })
 
+  describe('#map()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 1; i < 5; i++) {
+        list.push(i*2)
+      }
+    })
+
+    it('builds a new list', function () {
+      var out = list.map(function(item) { return item/2 })
+      for (var i = 1; i < 5; i++) {
+        assert.equal(out.next(), i)
+      }
+    })
+  })
+
   describe('#reduce()', function () {
     before(function () {
       list = new DoublyCircular()
