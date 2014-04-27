@@ -34,4 +34,33 @@ describe('Mutators', function () {
       assert.equal(list.current, '15')
     })
   })
+
+  describe('#pop()', function () {
+    beforeEach(function () {
+      list = new DoublyCircular()
+    })
+
+    it('returns undefined for empty lists', function () {
+      assert.equal(list.length, 0)
+      assert.equal(list.pop(), undefined)
+      assert.equal(list.length, 0)
+    })
+
+    it('removes the last element added', function () {
+      for (var i = 0; i < 5; i++) {
+        list.push(i)
+      }
+      assert.equal(list.pop(), 4)
+      assert.equal(list.length, 4)
+      assert.equal(list.pop(), 3)
+    })
+
+    it('removes all of the elements', function () {
+      for (var i = 0; i < 20; i++) { list.push(i) }
+      for (var i = 0; i < 20; i++) {
+        assert.equal(list.pop(), 19-i)
+        assert.equal(list.length, 19-i)
+      }
+    })
+  })
 })
