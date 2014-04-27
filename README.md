@@ -1,6 +1,9 @@
-# doublycircular [![Build Status](https://travis-ci.org/rampantmonkey/node-doublycircular.svg?branch=master)](https://travis-ci.org/rampantmonkey/node-doublycircular)
+# doublycircular
 
 Doubly Circular linked list with iterator and array-like interface
+
+
+[![Build Status badge](http://img.shields.io/travis/rampantmonkey/node-doublycircular.svg?style=flat)](https://travis-ci.org/rampantmonkey/node-doublycircular) [![npm package version badge](http://img.shields.io/npm/v/doublycircular.svg?style=flat)](https://www.npmjs.org/package/doublycircular) [![license badge](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 ## Contributing
 
