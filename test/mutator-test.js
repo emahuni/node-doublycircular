@@ -20,6 +20,22 @@ describe('Mutators', function () {
     })
   })
 
+  describe('#unshift()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 5; i++) {
+        list.unshift(i.toString())
+      }
+    })
+
+    it('updates the length', function () {
+      assert.equal(list.length, 5)
+    })
+    it('updates the entry point', function () {
+      assert.equal(list._entry.data, '4')
+    })
+  })
+
   describe('#reset()', function () {
     before(function () {
       list = new DoublyCircular()
@@ -63,6 +79,35 @@ describe('Mutators', function () {
       for (var i = 0; i < 20; i++) { list.push(i) }
       for (var i = 0; i < 20; i++) {
         assert.equal(list.pop(), 19-i)
+        assert.equal(list.length, 19-i)
+      }
+    })
+  })
+
+  describe('#shift()', function () {
+    beforeEach(function () {
+      list = new DoublyCircular()
+    })
+
+    it('returns undefined for empty lists', function () {
+      assert.equal(list.length, 0)
+      assert.equal(list.shift(), undefined)
+      assert.equal(list.length, 0)
+    })
+
+    it('removes the last element added', function () {
+      for (var i = 0; i < 5; i++) {
+        list.push(i)
+      }
+      assert.equal(list.shift(), 0)
+      assert.equal(list.length, 4)
+      assert.equal(list.shift(), 1)
+    })
+
+    it('removes all of the elements', function () {
+      for (var i = 0; i < 20; i++) { list.push(i) }
+      for (var i = 0; i < 20; i++) {
+        assert.equal(list.shift(), i)
         assert.equal(list.length, 19-i)
       }
     })
