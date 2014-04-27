@@ -89,6 +89,29 @@ describe('Iteration', function () {
     })
   })
 
+  describe('#forEachCCW()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 7; i++) {
+        list.push(i.toString())
+      }
+    })
+
+    it('invokes a function for each item', function () {
+      var c = list.current
+      var output = ''
+      list.forEachCCW(function (item) {
+        output += item
+      })
+      assert.equal(output, '6543210')
+      assert.equal(list.current, c)
+    })
+
+    it('does not throw an error if no callback provided', function () {
+      assert.doesNotThrow(function () {list.forEach()})
+    })
+  })
+
   describe('#map()', function () {
     before(function () {
       list = new DoublyCircular()
@@ -117,6 +140,21 @@ describe('Iteration', function () {
       assert.equal(list.reduce(function (acc, item) {
         return acc + item
       }, 0), 30)
+    })
+  })
+
+  describe('#reduceCCW()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 1; i < 5; i++) {
+        list.push(i*i)
+      }
+    })
+
+    it('collects the result of the callback', function () {
+      assert.equal(list.reduceCCW(function (acc, item) {
+        return acc + item
+      }, ''), '16941')
     })
   })
 

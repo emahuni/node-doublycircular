@@ -27,9 +27,10 @@ Doubly Circular linked list with iterator and array-like interface
 - `DoublyCircular.prototype.every()` check if `callback` is true for every item
 - `DoublyCircular.prototype.filter()`
 - `DoublyCircular.prototype.forEach()` invoke `callback` function for each item in the list
+- `DoublyCircular.prototype.forEachCCW()` same as `forEach()` but opposite iteration direction
 - `DoublyCircular.prototype.map()` create a new list with each item's data containing the result of the callback
 - `DoublyCircular.prototype.reduce()` apply `callback` against accumulator and each value in the list
-- `DoublyCircular.prototype.reduceRight()`
+- `DoublyCircular.prototype.reduceCCW()` same as `reduce()` but opposite iteration direction
 - `DoublyCircular.prototype.some()` check if `callback` is true for any item
 
 ## Contributing
