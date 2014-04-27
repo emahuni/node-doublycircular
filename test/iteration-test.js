@@ -65,4 +65,27 @@ describe('Iteration', function () {
       }
     })
   })
+
+  describe('#forEach()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 7; i++) {
+        list.push(i.toString())
+      }
+    })
+
+    it('invokes a function for each item', function () {
+      var c = list.current
+      var output = ''
+      list.forEach(function (item) {
+        output += item
+      })
+      assert.equal(output, '0123456')
+      assert.equal(list.current, c)
+    })
+
+    it('does not throw an error if no callback provided', function () {
+      assert.doesNotThrow(function () {list.forEach()})
+    })
+  })
 })

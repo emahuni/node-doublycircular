@@ -26,7 +26,7 @@ Doubly Circular linked list with iterator and array-like interface
 ### Iteration methods
 - `DoublyCircular.prototype.every()`
 - `DoublyCircular.prototype.filter()`
-- `DoublyCircular.prototype.forEach()`
+- `DoublyCircular.prototype.forEach()` invoke `callback` function for each item in the list
 - `DoublyCircular.prototype.map()`
 - `DoublyCircular.prototype.reduce()`
 - `DoublyCircular.prototype.reduceRight()`
