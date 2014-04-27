@@ -33,6 +33,10 @@ describe('Mutators', function () {
       list.reset()
       assert.equal(list.current, '15')
     })
+
+    it('returns a reference to itself', function () {
+      assert.equal(list.reset(), list)
+    })
   })
 
   describe('#pop()', function () {
