@@ -193,4 +193,17 @@ describe('Iteration', function () {
       assert(list.some(function (item) { return item%2 === 0}))
     })
   })
+
+  describe('#filter()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 100; i++) {
+        list.push(i)
+      }
+    })
+
+    it('removes elements that do not pass the test defined in the callback', function () {
+      assert.equal(list.filter(function (item) { return item%7 === 0}).length, 15)
+    })
+  })
 })
