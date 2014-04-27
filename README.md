@@ -2,8 +2,35 @@
 
 Doubly Circular linked list with iterator and array-like interface
 
-
 [![Build Status badge](http://img.shields.io/travis/rampantmonkey/node-doublycircular.svg?style=flat)](https://travis-ci.org/rampantmonkey/node-doublycircular) [![npm package version badge](http://img.shields.io/npm/v/doublycircular.svg?style=flat)](https://www.npmjs.org/package/doublycircular) [![license badge](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
+
+## Properties
+- `DoublyCircular.length`
+- `DoublyCircular.prototype`
+
+## Methods
+
+### Mutator methods
+- `DoublyCircular.prototype.pop()`
+- `DoublyCircular.prototype.push()`
+- `DoublyCircular.prototype.reverse()`
+- `DoublyCircular.prototype.shift()`
+- `DoublyCircular.prototype.unshift()`
+- `DoublyCircular.prototype.sort()`
+
+### Accessor methods
+- `DoublyCircular.prototype.concat()`
+- `DoublyCircular.prototype.join()`
+- `DoublyCircular.prototype.toArray()`
+
+### Iteration methods
+- `DoublyCircular.prototype.every()`
+- `DoublyCircular.prototype.filter()`
+- `DoublyCircular.prototype.forEach()`
+- `DoublyCircular.prototype.map()`
+- `DoublyCircular.prototype.reduce()`
+- `DoublyCircular.prototype.reduceRight()`
+- `DoublyCircular.prototype.some()`
 
 ## Contributing
 
