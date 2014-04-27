@@ -54,4 +54,24 @@ describe('Accessors', function () {
       assert.equal(c, list.current)
     })
   })
+
+  describe('#concat()', function () {
+    it('merges two lists', function () {
+      var a = new DoublyCircular()
+      var b = new DoublyCircular()
+      var alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      for (var i = 0; i < alphabet.length; i++) {
+        a.push(i)
+        b.push(alphabet[i])
+      }
+
+      var c = a.concat(b)
+      for (var i = 0; i < a.length; i++) {
+        assert.equal(c.next(),i)
+      }
+      for (var i = 0; i < b.length; i++) {
+        assert.equal(c.next(),alphabet[i])
+      }
+    })
+  })
 })

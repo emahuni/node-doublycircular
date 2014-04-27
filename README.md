@@ -19,7 +19,7 @@ Doubly Circular linked list with iterator and array-like interface
 - `DoublyCircular.prototype.sort()`
 
 ### Accessor methods
-- `DoublyCircular.prototype.concat()`
+- `DoublyCircular.prototype.concat()` merge two doubly circular lists into a new one
 - `DoublyCircular.prototype.join()` return a string containing all of the items in the list with an optional separator
 - `DoublyCircular.prototype.toArray()` return an array containing all of the items in the list
 
