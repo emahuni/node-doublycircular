@@ -13,7 +13,7 @@ Doubly Circular linked list with iterator and array-like interface
 ### Mutator methods
 - `DoublyCircular.prototype.pop()` remove last item added to the list
 - `DoublyCircular.prototype.push()` add new item to the list
-- `DoublyCircular.prototype.reverse()`
+- `DoublyCircular.prototype.reverse()` swap next and previous for each item
 - `DoublyCircular.prototype.shift()`
 - `DoublyCircular.prototype.unshift()`
 - `DoublyCircular.prototype.sort()`

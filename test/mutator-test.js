@@ -67,4 +67,26 @@ describe('Mutators', function () {
       }
     })
   })
+
+  describe('#reverse()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 10; i++) {
+        list.push(i)
+      }
+    })
+
+    it('is a self-inverse', function () {
+      assert.equal(list.reverse().reverse(), list)
+    })
+
+    it('swaps prev and next', function () {
+      list.reverse()
+      var c
+      for (var i = 0; i < 10; i++) {
+        c = list.next()
+        assert.equal(c, 9-i)
+      }
+    })
+  })
 })
