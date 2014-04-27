@@ -44,7 +44,7 @@ describe('Mutators', function () {
       }
     })
 
-    it('moves current to first element inserted', function () {
+    it('moves current to first item inserted', function () {
       assert.equal(list.current, '1')
       list.reset()
       assert.equal(list.current, '15')
@@ -66,7 +66,7 @@ describe('Mutators', function () {
       assert.equal(list.length, 0)
     })
 
-    it('removes the last element added', function () {
+    it('removes the last item added', function () {
       for (var i = 0; i < 5; i++) {
         list.push(i)
       }
@@ -75,7 +75,7 @@ describe('Mutators', function () {
       assert.equal(list.pop(), 3)
     })
 
-    it('removes all of the elements', function () {
+    it('removes all of the items', function () {
       for (var i = 0; i < 20; i++) { list.push(i) }
       for (var i = 0; i < 20; i++) {
         assert.equal(list.pop(), 19-i)
@@ -95,7 +95,7 @@ describe('Mutators', function () {
       assert.equal(list.length, 0)
     })
 
-    it('removes the last element added', function () {
+    it('removes the last item added', function () {
       for (var i = 0; i < 5; i++) {
         list.push(i)
       }
@@ -104,7 +104,7 @@ describe('Mutators', function () {
       assert.equal(list.shift(), 1)
     })
 
-    it('removes all of the elements', function () {
+    it('removes all of the items', function () {
       for (var i = 0; i < 20; i++) { list.push(i) }
       for (var i = 0; i < 20; i++) {
         assert.equal(list.shift(), i)

@@ -166,11 +166,11 @@ describe('Iteration', function () {
       }
     })
 
-    it('determines if every element is even', function () {
+    it('determines if every item is even', function () {
       assert(list.every(function (item) { return item%2 === 0 }))
     })
 
-    it('determines that not every element is even', function () {
+    it('determines that not every item is even', function () {
       list.push(7)
       assert(!list.every(function (item) { return item%2 === 0}))
     })
@@ -202,7 +202,7 @@ describe('Iteration', function () {
       }
     })
 
-    it('removes elements that do not pass the test defined in the callback', function () {
+    it('removes items that do not pass the test defined in the callback', function () {
       assert.equal(list.filter(function (item) { return item%7 === 0}).length, 15)
     })
   })
