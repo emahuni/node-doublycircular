@@ -29,4 +29,29 @@ describe('Accessors', function () {
       assert.equal(c, list.current)
     })
   })
+
+  describe('#join()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for(var i = 0; i < 4; i++) { list.push(i) }
+    })
+
+    it('returns an empty string for an empty list', function () {
+      assert.equal((new DoublyCircular()).join(), '')
+    })
+
+    it('returns a string with the data from each item', function () {
+      assert.equal(list.join(), '0123')
+    })
+
+    it('returns a string with each item separated by "separator"', function () {
+      assert.equal(list.join(', '), '0, 1, 2, 3')
+    })
+
+    it('does not replace current', function () {
+      var c = list.current
+      list.join()
+      assert.equal(c, list.current)
+    })
+  })
 })
