@@ -16,7 +16,6 @@ Doubly Circular linked list with iterator and array-like interface
 - `DoublyCircular.prototype.reverse()` swap next and previous for each item
 - `DoublyCircular.prototype.shift()` remove item from beginning of list
 - `DoublyCircular.prototype.unshift()` insert item at beginning of list
-- `DoublyCircular.prototype.sort()`
 
 ### Accessor methods
 - `DoublyCircular.prototype.concat()` merge two doubly circular lists into a new one
