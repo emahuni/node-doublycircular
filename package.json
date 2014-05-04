@@ -3,7 +3,7 @@
   "name": "doublycircular",
   "description": "Doubly Circular linked list with iterator and array-like interface.",
   "keywords": ["array", "iterator", "circular", "linkedlist", "list", "doublycircular"],
-  "version": "1.0.0",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "http://github.com/rampantmonkey/node-doublycircular.git"
