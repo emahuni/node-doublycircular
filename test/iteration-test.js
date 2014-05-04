@@ -206,4 +206,27 @@ describe('Iteration', function () {
       assert.equal(list.filter(function (item) { return item%7 === 0}).length, 15)
     })
   })
+
+  describe('#find()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 100; i++) {
+        list.push(i)
+      }
+      list.reset()
+    })
+
+    it('returns the first item that matches the callback', function () {
+      assert.equal(list.find(function (item) { return item.toString().length >= 2 }), 10)
+    })
+
+    it('starts at the current item and sets the current item', function () {
+      list.reset()
+      for (var i = 0; i < 37; i++) {
+        list.next()
+      }
+      assert.equal(list.find(function (item) { return (item & 4) === 0 }), 40)
+      assert.equal(list.current, 40)
+    })
+  })
 })
