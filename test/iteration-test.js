@@ -229,4 +229,28 @@ describe('Iteration', function () {
       assert.equal(list.current, 40)
     })
   })
+
+  describe('#include()', function () {
+    before(function () {
+      list = new DoublyCircular()
+      for (var i = 0; i < 39; i++) {
+        list.push(i)
+      }
+      list.reset()
+    })
+
+    it('returns true if the list contains the item', function () {
+      for (var i = 0; i < 39; i++) {
+        assert(list.include(i))
+      }
+    })
+
+    it('returns false if the list does not contain the item', function () {
+      assert(!list.include("0"))
+      assert(!list.include(-1))
+      assert(!list.include(40))
+      assert(!list.include([0, 1]))
+      assert(!list.include({key: "value"}))
+    })
+  })
 })
